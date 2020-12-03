@@ -29,7 +29,7 @@
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Sign in to start your session</p>
-
+                <p id="message_error" class="login-box-msg text-danger" style="display:none">Sign in to start your session</p>
                 <form method="post" id="submit_form">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Username" name="username">
@@ -38,7 +38,9 @@
                                 <span class="fas fa-envelope"></span>
                             </div>
                         </div>
+                       
                     </div>
+                    <span id="username_error" class="text-danger"></span>
                     <div class="input-group mb-3">
                         <input type="password" class="form-control" placeholder="Password" name="password">
                         <div class="input-group-append">
@@ -46,7 +48,9 @@
                                 <span class="fas fa-lock"></span>
                             </div>
                         </div>
+                        
                     </div>
+                    <span id="password_error" class="text-danger"></span>
                     <div class="row">
                         <div class="col-8">
                             <div class="icheck-primary">
@@ -64,22 +68,8 @@
                     </div>
                 </form>
 
-                <div class="social-auth-links text-center mb-3">
-                    <p>- OR -</p>
-                    <a href="#" class="btn btn-block btn-primary">
-                        <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-                    </a>
-                    <a href="#" class="btn btn-block btn-danger">
-                        <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-                    </a>
-                </div>
-                <!-- /.social-auth-links -->
-
                 <p class="mb-1">
                     <a href="forgot-password.html">I forgot my password</a>
-                </p>
-                <p class="mb-0">
-                    <a href="register.html" class="text-center">Register a new membership</a>
                 </p>
             </div>
             <!-- /.login-card-body -->
@@ -94,6 +84,7 @@
     <!-- AdminLTE App -->
     <script src="<?php echo base_url(); ?>dist/js/adminlte.min.js"></script>
     <script src="<?php echo base_url(); ?>dist/js/script.js"></script>
+    
     
 </body>
 
